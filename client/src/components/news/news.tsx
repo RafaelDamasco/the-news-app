@@ -23,15 +23,17 @@ function News({ articles, isLoading }: Props) {
           first:first-letter:mr-3 first:first-letter:float-left"
         >
           <div className="mx-[5%]">
-            <p
-              className={`py-[10px] ${
-                index % 2 === 0
-                  ? 'text-[16px] italic'
-                  : 'text-[14px] uppercase font-[700]'
-              }`}
-            >
-              {article.title}
-            </p>
+            <a href={article.url}>
+              <p
+                className={`py-[10px] ${
+                  index % 2 === 0
+                    ? 'text-[16px] italic'
+                    : 'text-[14px] uppercase font-[700]'
+                }`}
+              >
+                {article.title}
+              </p>
+            </a>
           </div>
           {index % 2 === 0 && (
             <img

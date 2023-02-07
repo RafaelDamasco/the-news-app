@@ -8,6 +8,7 @@ import searchNewsService from './service/search';
 import Language from './components/language/language';
 import locationService from './service/location';
 import weatherService from './service/weather';
+import newsService from './service/news';
 
 export interface Article {
   title: string;
