@@ -221,7 +221,7 @@ function App() {
                   alt=""
                 />
                 <span className="italic  text-[12px]">
-                  {conversosCtoK(weather.main.temp).toFixed() + ' Celsius'}
+                  {weather.main.temp.toFixed() + ' Celsius'}
                 </span>
               </>
             ) : (
