@@ -5,13 +5,9 @@ import searchService from '../../service/search';
 
 interface Props {
   articles: Article[];
-  isLoading: any;
 }
 
-function News({ articles, isLoading }: Props) {
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
+function News({ articles }: Props) {
 
   return (
     <div className="grid grid-cols-5 h-[57vh] col-span-10  border-black mt-[20px]">
