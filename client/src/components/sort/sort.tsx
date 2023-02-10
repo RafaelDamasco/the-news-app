@@ -17,6 +17,7 @@ export default function Sort({ handleChange }: Props) {
         {sortByOptions.map((option, index) => (
           <div key={index} className="flex items-center ">
             <input
+              className="accent-[#2f2f2f]"
               type="radio"
               name="sortBy"
               value={option.name}

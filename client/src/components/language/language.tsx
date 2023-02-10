@@ -22,6 +22,7 @@ export default function Language({ handleChange }: Props) {
         {lang.map((l, index) => (
           <div key={index} className="min-w-[90px] flex items-center my-1 mx-0">
             <input
+              className="accent-[#2f2f2f]"
               type="radio"
               name="lang"
               value={l.name}

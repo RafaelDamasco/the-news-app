@@ -23,11 +23,11 @@ export default function Search({
         type="text"
         name="q"
         placeholder="Search"
-        className="mr-4 h-10 self-center w-[200px] border-none rounded pl-1.5 text-sm text-[#000] "
+        className="mr-4 h-10 self-center w-[200px] rounded pl-1.5 text-sm text-[#000] bg-[#f9f7f1] border-[#c0c0c0] border-solid border-[1px]"
         onChange={handleChange}
         required
       />
-      <button type="submit" className="bg-[#000] p-2 text-white">
+      <button type="submit" className="bg-[#2f2f2f] p-2 text-white">
         Search
       </button>
     </form>

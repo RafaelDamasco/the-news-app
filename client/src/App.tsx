@@ -175,7 +175,6 @@ function App() {
           },
         ]);
       } else {
-        console.log('sucesso ao carregar dados');
         setArticles(data.articles);
       }
     }
@@ -196,7 +195,7 @@ function App() {
 
   return (
     <div className="w-screen h-screen flex items-center justify-center">
-      <div className="max-w-[90%] max-h-[90%] min-w-[90%] min-h-[90%] bg-[##f9f7f1] shadow-[0px_10px_25px_5px_rgba(0,0,0,0.26)] p-5 shadow-slate-800 flex flex-col">
+      <div className="max-w-[90%] max-h-[90%] min-w-[90%] min-h-[90%] bg-[#f9f7f1] shadow-[0px_10px_25px_5px_rgba(0,0,0,0.26)] p-5 shadow-slate-800 flex flex-col">
         <div className="flex content-center h-full justify-between items-center pb-5 px-10">
           <div className="w-[12%] border-black border-[3px] border-double p-[8px] flex flex-col items-center justify-center">
             {weather.weather[0].description && weather.main.temp ? (
@@ -209,7 +208,7 @@ function App() {
                   src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                   alt=""
                 />
-                <span className="italic  text-[12px]">
+                <span className="italic text-[12px]">
                   {weather.main.temp.toFixed() + ' Celsius'}
                 </span>
               </>
