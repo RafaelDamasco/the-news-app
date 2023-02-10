@@ -18,6 +18,11 @@ export const searchNews = async (req: Request, res: Response) => {
     const lang = (req.query as { lang: string }).lang;
     const sortBy = (req.query as { sortby: string }).sortby;
 
+    // if (!q) {
+    //   console.log('You must provide a search term');
+    //   return res.send({ error: 'You must provide a search term' });
+    // }
+
     cache.set(q, await search(q, searcbInAttribute, lang, sortBy));
     res.send(await search(q, searcbInAttribute, lang, sortBy));
   } catch (error: unknown) {

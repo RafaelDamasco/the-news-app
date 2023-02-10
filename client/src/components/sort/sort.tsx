@@ -20,6 +20,7 @@ export default function Sort({ handleChange }: Props) {
               type="radio"
               name="sortBy"
               value={option.name}
+              defaultChecked={option.name === 'relevance'}
               onChange={handleChange}
             />
             <p>{option.name}</p>

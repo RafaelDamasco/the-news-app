@@ -25,6 +25,7 @@ export default function Search({
         placeholder="Search"
         className="mr-4 h-10 self-center w-[200px] border-none rounded pl-1.5 text-sm text-[#000] "
         onChange={handleChange}
+        required
       />
       <button type="submit" className="bg-[#000] p-2 text-white">
         Search

@@ -45,11 +45,6 @@ interface Weather {
   }[];
 }
 
-function conversosCtoK(kel: number) {
-  const conversionC = kel - 273;
-  return conversionC;
-}
-
 function App() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [searchFields, setSearchFields] = useState<SearchFields>({
@@ -191,8 +186,8 @@ function App() {
     async (searchFields: SearchFields) => {
       const { data } = await searchNewsService().getSearchNews(
         searchFields.q,
-        searchFields.lang,
-        searchFields.sortBy
+        (searchFields.lang = 'en'),
+        (searchFields.sortBy = 'relevance')
       );
       setArticles(data.articles);
     },

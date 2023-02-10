@@ -3,17 +3,6 @@ interface Props {
 }
 
 export default function Language({ handleChange }: Props) {
-  // const onChange = (input: HTMLInputElement) => {
-  // setFilterLang(input.value);
-  // if (input.checked) {
-  //   const state = [...filterLang, input.value];
-  //   setFilterLang(state);
-  // } else {
-  //   const state = filterLang.filter((val: any) => val !== input.value);
-  //   setFilterLang(state);
-  // }
-  // };
-
   const lang = [
     {
       name: 'pt',
@@ -36,6 +25,7 @@ export default function Language({ handleChange }: Props) {
               type="radio"
               name="lang"
               value={l.name}
+              defaultChecked={l.name === 'en'}
               onChange={handleChange}
             />
             <p className="m-0 ml-1">{l.name}</p>
